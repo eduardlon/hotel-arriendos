@@ -1,0 +1,244 @@
+/* Container */
+.container {
+  padding: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+/* Create button */
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-blue-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-in-out);
+}
+
+.createButton:hover {
+  background: var(--color-blue-600);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.createButton:active {
+  transform: translateY(0);
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.input,
+.select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+  transition: all var(--duration-fast) var(--ease-in-out);
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-blue-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input:invalid,
+.select:invalid {
+  border-color: var(--color-red-500);
+}
+
+.error {
+  font-size: var(--font-size-sm);
+  color: var(--color-red-500);
+  margin-top: var(--spacing-xs);
+}
+
+/* Form actions */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.cancelButton,
+.deleteButton,
+.submitButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-in-out);
+  border: none;
+}
+
+.cancelButton {
+  background: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+.cancelButton:hover {
+  background: var(--color-gray-200);
+}
+
+.deleteButton {
+  background: var(--color-red-500);
+  color: var(--color-white);
+  margin-right: auto;
+}
+
+.deleteButton:hover {
+  background: var(--color-red-600);
+}
+
+.submitButton {
+  background: var(--color-blue-accent);
+  color: var(--color-white);
+}
+
+.submitButton:hover {
+  background: var(--color-blue-600);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .createButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .deleteButton {
+    margin-right: 0;
+    order: 3;
+  }
+
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+  }
+
+  .headerActions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.tableActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.actionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  background: transparent;
+  border: none;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast);
+}
+
+.actionIcon:hover {
+  background: var(--color-gray-100);
+  color: var(--color-blue-accent);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.disponible {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.ocupada {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.limpieza {
+  background-color: #f0f9ff;
+  color: #075985;
+}
+
+.mantenimiento {
+  background-color: #fefce8;
+  color: #854d0e;
+}

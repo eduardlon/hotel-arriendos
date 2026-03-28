@@ -1,0 +1,39 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.badgePaid {
+  background: var(--color-green-accent-alpha-10);
+  color: var(--color-green-accent);
+}
+
+.badgePending {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--color-status-warning);
+}
+
+.badgeOverdue {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-status-error);
+}
+
+.actionButton {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-in-out);
+}
+
+.actionButton:hover {
+  border-color: var(--color-blue-accent);
+  color: var(--color-blue-accent);
+}

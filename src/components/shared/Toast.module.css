@@ -1,0 +1,43 @@
+.container {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  z-index: 1100;
+}
+
+.toast {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  box-shadow: var(--shadow-md);
+  border: 1px solid transparent;
+  min-width: 220px;
+}
+
+.success {
+  background: rgba(5, 150, 105, 0.12);
+  color: var(--color-green-accent);
+  border-color: rgba(5, 150, 105, 0.3);
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--color-status-error);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.info {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--color-blue-accent);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+@media (max-width: 767px) {
+  .container {
+    right: 16px;
+    left: 16px;
+  }
+}

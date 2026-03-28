@@ -1,0 +1,23 @@
+.shell {
+  min-height: 100vh;
+  background: var(--color-gray-50);
+}
+
+.main {
+  margin-left: 260px;
+  padding-top: 96px;
+  transition: margin var(--duration-normal) var(--ease-in-out);
+}
+
+@media (max-width: 1023px) {
+  .main {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    margin-left: 0;
+    padding-top: 124px;
+  }
+}

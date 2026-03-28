@@ -1,0 +1,187 @@
+.container {
+  background: var(--surface-color, #ffffff);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.headerIcon {
+  color: var(--primary-color, #3b82f6);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary, #1f2937);
+  margin: 0;
+}
+
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.dayColumn {
+  min-width: 140px;
+  background: var(--background-color, #f9fafb);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dayColumn.today {
+  background: #eff6ff;
+  border: 2px solid var(--primary-color, #3b82f6);
+}
+
+.dayHeader {
+  background: var(--surface-color, #ffffff);
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.today .dayHeader {
+  background: var(--primary-color, #3b82f6);
+  color: white;
+}
+
+.dayName {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dayDate {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.cleaningsList {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100px;
+}
+
+.cleaningItem {
+  background: var(--surface-color, #ffffff);
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cleaningItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.roomInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.roomNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary, #1f2937);
+}
+
+.roomFloor {
+  font-size: 12px;
+  color: var(--text-secondary, #6b7280);
+}
+
+.employeeInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.employeeIcon {
+  color: var(--text-secondary, #6b7280);
+}
+
+.employeeName {
+  font-size: 13px;
+  color: var(--text-secondary, #6b7280);
+}
+
+.timeInfo {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+.time {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-color, #3b82f6);
+}
+
+.emptyDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 80px;
+}
+
+.emptyText {
+  font-size: 13px;
+  color: var(--text-tertiary, #9ca3af);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .weekGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .dayColumn {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .weekGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .dayColumn {
+    min-width: 100px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .cleaningItem {
+    padding: 8px;
+  }
+}

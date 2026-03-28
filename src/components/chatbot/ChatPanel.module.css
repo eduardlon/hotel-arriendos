@@ -1,0 +1,115 @@
+.panel {
+  position: fixed;
+  bottom: calc(92px + env(safe-area-inset-bottom));
+  right: calc(24px + env(safe-area-inset-right));
+  width: 380px;
+  max-height: 520px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1003;
+}
+
+.header {
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-blue-accent), var(--color-green-accent));
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.messages {
+  flex: 1;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  overflow-y: auto;
+  background: var(--color-surface-muted);
+}
+
+.message {
+  max-width: 80%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--color-blue-accent);
+  color: var(--color-white);
+}
+
+.assistant {
+  align-self: flex-start;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-gray-900);
+}
+
+.inputRow {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.input {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.sendButton {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--color-blue-accent);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.sendButton:disabled {
+  background: var(--color-gray-300);
+  cursor: not-allowed;
+}
+
+.suggestion {
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-blue-accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .panel {
+    right: 16px;
+    left: 16px;
+    width: auto;
+    bottom: calc(88px + env(safe-area-inset-bottom));
+    max-height: calc(100vh - 140px);
+  }
+}

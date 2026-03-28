@@ -1,0 +1,37 @@
+.toggleContainer {
+  display: flex;
+  background-color: var(--surface-2);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+  border: 1px solid var(--border);
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover {
+  background-color: var(--surface-3);
+  color: var(--text-1);
+}
+
+.toggleButton.active {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(var(--primary-rgb), 0.2);
+}
+
+.active {
+    background-color: var(--primary);
+    color: white;
+}
